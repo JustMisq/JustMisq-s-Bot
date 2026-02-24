@@ -1,0 +1,29 @@
+{
+  "bot": {
+    "clientId": "1475928268128649298",
+    "guildId": "1429876443990720655"
+  },
+  "twitch": {
+    "channelName": "justmisq"
+  },
+  "channels": {
+    "modLogs": "1436110503771635792",
+    "welcome": "1434585235282071593"
+  },
+  "antiSpam": {
+    "maxMessages": 5,
+    "intervalMs": 5000,
+    "muteDurationMs": 60000
+  },
+  "staffRoles": {
+    "direction": "1434580484414898227",
+    "production": "1434580567646535801",
+    "moderation": "1434580617550364825"
+  },
+  "notifications": {
+    "twitch": "1436859635486294037",
+    "youtube": "1436859777123618940",
+    "tiktok": "1475937089207013417",
+    "twitter": ""
+  }
+}
