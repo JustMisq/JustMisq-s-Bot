@@ -14,8 +14,8 @@ async function getTwitchToken() {
   }
 
   const params = new URLSearchParams({
-    client_id: config.twitch.clientId,
-    client_secret: config.twitch.clientSecret,
+    client_id: process.env.TWITCH_CLIENT_ID,
+    client_secret: process.env.TWITCH_SECRET,
     grant_type: 'client_credentials',
   });
 
@@ -39,10 +39,10 @@ async function getStreamInfo() {
   const token = await getTwitchToken();
 
   const res = await fetch(
-    `https://api.twitch.tv/helix/streams?user_login=${config.twitch.channelName}`,
+    `https://api.twitch.tv/helix/streams?user_login=${process.env.TWITCH_CHANNEL || config.twitch.channelName}`,
     {
       headers: {
-        'Client-ID': config.twitch.clientId,
+        'Client-ID': process.env.TWITCH_CLIENT_ID,
         Authorization: `Bearer ${token}`,
       },
     },
